@@ -12,6 +12,7 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   font-family: "Roboto", sans-serif;
+  margin: none;
 }
 
 h2 {
@@ -159,9 +160,44 @@ input[type=text] {
   margin-right: 30px;
 }
 
+.restaurant {
+  width: 100%;
+  background-color: #EAEAEA;
+  margin: none;
+}
+
+.restaurant-item {
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
 .restaurant-item img {
   max-width: 100%;
   height: auto;
+  padding: 0 0px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.restaurant-bandeau {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.restaurant-bandeau {
+  align-self: center;
+  padding-right: 20px;
+}
+
+footer {
+  background-color: black;
+  color: white;
 }
 
 /*# sourceMappingURL=main.css.map */

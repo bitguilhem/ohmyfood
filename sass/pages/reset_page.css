@@ -23,6 +23,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+	margin: none;
 	line-height: 0;
 }
 ol, ul {

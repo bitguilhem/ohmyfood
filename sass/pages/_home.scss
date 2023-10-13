@@ -128,12 +128,44 @@ header {
       @include m.encircle(v.$primary_color);
       margin-right: 30px;
     }
-    
 
+    // style restaurant //
+    .restaurant {
+      width: 100%;
+      background-color: v.$grey_color;
+      margin: none
+    }
+  
+    .restaurant-item {
+      width: 90%;
+      align-items: center;
+      justify-content: center;
 
-
+    }
   .restaurant-item img {
     max-width: 100%;
     height: auto;
+    padding: 0 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
-   
+
+  .restaurant-bandeau  {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .restaurant-bandeau {
+    align-self: center;
+    padding-right: 20px ;
+  }
+
+  footer {
+    background-color: black;
+    color: white; 
+  }
