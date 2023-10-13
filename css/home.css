@@ -1,0 +1,69 @@
+header img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-icon {
+  background-color: #EAEAEA;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.icon-search {
+  background-color: #EAEAEA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  border: none;
+}
+.icon-search i {
+  margin-right: 10px;
+}
+.icon-search input[type=text] {
+  border: none;
+}
+@media (min-width: 768px) {
+  .icon-search {
+    background-color: #EAEAEA;
+  }
+}
+
+input[type=text] {
+  background-color: #EAEAEA;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px;
+  width: 50%;
+}
+
+.reservation, .Fonctionnement, .restaurant {
+  margin-bottom: 20px;
+}
+
+.reservation, .Fonctionnement, .restaurant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.restaurant-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=home.css.map */
