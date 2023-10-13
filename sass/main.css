@@ -1,18 +1,123 @@
-/* Error: Expected expression.
- *    ,
- * 57 |     margin: ;
- *    |             ^
- *    '
- *   sass\pages\_home.scss 57:13  @forward
- *   sass\main.scss 3:1           root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Expected expression.\a    \2577 \a 57 \2502      margin: ;\d\a    \2502              ^\a    \2575 \a   sass\\pages\\_home.scss 57:13  @forward\a   sass\\main.scss 3:1           root stylesheet";
+body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Roboto", sans-serif;
 }
+
+h2 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 15px;
+}
+
+header img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* style search */
+.background-icon {
+  background-color: #EAEAEA;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.icon-search {
+  background-color: #EAEAEA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  margin: 0;
+  border: none;
+}
+.icon-search i {
+  margin-right: 10px;
+}
+.icon-search input[type=text] {
+  border: none;
+}
+input[type=text] {
+  background-color: #EAEAEA;
+  border: none;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px;
+  width: 50%;
+}
+
+/* style les parties */
+.reservation, .Fonctionnement, .restaurant {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* style reservation */
+.reservation {
+  background-color: #EAEAEA;
+}
+
+.reservation h2 {
+  margin-top: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 0;
+}
+
+.reservation p {
+  margin-top: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.reservation .explore-button {
+  margin-top: 10px;
+  margin-bottom: 50px;
+  border: none;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #ff79da;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.restaurant-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*# sourceMappingURL=main.css.map */

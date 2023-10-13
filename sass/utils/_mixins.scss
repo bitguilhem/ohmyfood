@@ -1,6 +1,23 @@
+@use './../utils/variables' as v;
+
 @mixin media($breakpoint) {
     @media (min-width: $breakpoint) {
       @content;
     }
   }
-  
+
+@mixin round-button($background-color, $text-color) {
+    border: none;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: $background-color;
+    background: linear-gradient(to top, v.$primary_color, v.$secondary_color);
+    color: $text-color;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
