@@ -89,6 +89,47 @@ header {
       @include m.round-button(v.$secondary_color, #fff);
     }
   
+    .Fonctionnement, .restaurant {
+      width: 100%;
+    }
+
+    .Fonctionnement h2, .restaurant h2 {
+      text-align: left;
+      padding-left: 20px;
+      width: 100%;
+    }
+    
+    .Fonctionnement .step {
+    
+    }
+
+    .option {
+      width: 100%;
+    }
+
+    .step {
+    display: flex;
+    align-items: center;
+    background-color: v.$grey_color; 
+    width: 100%;
+    border-radius: 25px; /* Arrondi les coins */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: auto;
+    padding-right: auto;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right:20px;
+    margin-left: 20px;
+    }
+
+    .step-number {
+      @include m.encircle(v.$primary_color);
+      margin-right: 30px;
+    }
+    
+
 
 
   .restaurant-item img {

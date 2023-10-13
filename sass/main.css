@@ -15,7 +15,7 @@ time, mark, audio, video {
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
 }
 
@@ -113,6 +113,50 @@ input[type=text] {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+}
+
+.Fonctionnement, .restaurant {
+  width: 100%;
+}
+
+.Fonctionnement h2, .restaurant h2 {
+  text-align: left;
+  padding-left: 20px;
+  width: 100%;
+}
+
+.option {
+  width: 100%;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background-color: #EAEAEA;
+  width: 100%;
+  border-radius: 25px; /* Arrondi les coins */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: auto;
+  padding-right: auto;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.step-number {
+  position: relative;
+  display: inline-block;
+  background-color: #9356dc;
+  color: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 30px;
 }
 
 .restaurant-item img {

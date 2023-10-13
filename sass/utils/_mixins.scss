@@ -21,3 +21,15 @@
     display: inline-block;
     font-size: 16px;
 }
+
+@mixin encircle($background-color) {
+  position: relative;
+  display: inline-block;
+  background-color: $background-color;
+  color: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+}
