@@ -6,7 +6,7 @@ header {
     max-width: 200px;
     height: auto;
     display: block; 
-    margin: 0 auto;
+    margin: 10px auto;
     padding-top: 15px;
     padding-bottom: 5px;
   }
@@ -48,14 +48,13 @@ header {
     background-color: v.$grey_color;
     border: none;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 18px;
     padding: 10px;
     width: 50%;
   }
 
   /* style les parties */
   .reservation, .Fonctionnement, .restaurant {
-    margin-bottom: 20px; 
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -66,68 +65,95 @@ header {
   /* style reservation */
 
   .reservation {
-    background-color: v.$grey_color;
-  }
+    background-color: v.$lighter_grey_color;
+    display: flex;
+    width: 100%;
+    justify-content: center;
 
-  .reservation h2 {
-    margin-top: 30px; 
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 0;
+  h2 {
+    margin-top: 45px; 
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 0px;
   }
   
-  .reservation p {
+  p {
+    font-size: 20px;
     margin-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 20px;
+    margin-bottom: 30px;
     
   }
   
-  .reservation .explore-button {
+  .explore-button {
       margin-top: 10px; 
-      margin-bottom: 50px; 
+      margin-bottom: 70px; 
       @include m.round-button(v.$secondary_color, #fff);
     }
-  
-    .Fonctionnement, .restaurant {
+  }
+
+    .fonctionnement, .restaurant {
       width: 100%;
     }
 
-    .Fonctionnement h2, .restaurant h2 {
+    .fonctionnement h2, .restaurant h2 {
       text-align: left;
       padding-left: 20px;
       width: 100%;
     }
     
-    .Fonctionnement .step {
-    
+    .fonctionnement {
+      margin-top: 50px;
     }
 
     .option {
       width: 100%;
+      margin-top: 40px;
+      margin-bottom: 80px;
     }
 
-    .step {
+    .fonctionnement__step {
     display: flex;
     align-items: center;
-    background-color: v.$grey_color; 
-    width: 100%;
-    border-radius: 25px; /* Arrondi les coins */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: auto;
-    padding-right: auto;
+    background-color: v.$lighter_grey_color; 
+    width: auto;
+    border-radius: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
     text-align: center;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 15px;
     margin-right:20px;
     margin-left: 20px;
+    position: relative;
+   
+    .step-number {
+      position: relative;
+      @include m.encircle(v.$primary_color);
+      margin-right: 20px;
+      margin-left: -20px;
+  
     }
 
-    .step-number {
-      @include m.encircle(v.$primary_color);
-      margin-right: 30px;
+    i.fas {
+      width: 40px;
+      position: absolute;
+      font-size: 24px;
+      color: v.$darken_grey_color;
     }
+
+    p {
+      width: 100%
+      text-align left;
+      margin-left: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
 
     // style restaurant //
     .restaurant {
@@ -135,17 +161,30 @@ header {
       background-color: v.$grey_color;
       margin: none
     }
+
+    .reservation-section {
+      
+    }
   
     .restaurant-item {
       width: 90%;
       align-items: center;
       justify-content: center;
-
+      position: relative;
     }
+
+    .restaurant-item .flag_new {
+      position: absolute;
+      right: 20px;
+      top: 40px;
+    }
+
   .restaurant-item img {
     max-width: 100%;
+    max-height: 400px;
     height: auto;
-    padding: 0 0px;
+    padding: 0 20px;
+    object-fit: cover;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
@@ -161,8 +200,10 @@ header {
   }
 
   .restaurant-bandeau {
-    align-self: center;
-    padding-right: 20px ;
+    display: flex;
+    align-items: center;
+    padding: 0 20px ;
+
   }
 
   footer {
