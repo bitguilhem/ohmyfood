@@ -302,6 +302,7 @@ input[type=text] {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-left: 15px;
 }
 .restaurant-item .restaurant-titre h3 {
   font-size: 20px;
@@ -317,6 +318,7 @@ input[type=text] {
   font-size: 24px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   padding-bottom: 10px;
+  padding-right: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
