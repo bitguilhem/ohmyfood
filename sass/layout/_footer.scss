@@ -1,18 +1,38 @@
-<footer>
-<div class="footer-titre">
-    <h1>ohmyfood</h1>
-</div>
-<div class="footer-liste">
-    <div class="footer-icône">
-        <i class="fas fa-utensils"></i>
-        <p>Proposer un restaurant</p>
-    </div>
-    <div class="footer-icône">
-        <i class="fas fa-handshake"></i>
-    </div>
-    <p>Devenir partenaire</p>
-    <p>Mentions légales</p>
-    <p>Contact</p>
-</div>
+  footer {
+    background-color: lighten(black, 20%);
+    color: white;
+    padding-left: 30px;
+    padding-bottom: 10px;
 
-</footer>
+    img {
+      width: 120px;
+      height: auto;
+      display: block;
+      margin: 0px;
+      padding-top: 30px;
+      padding-bottom: 25px;
+      filter: brightness(0) invert(1);
+    }
+    
+    .fas {
+        padding-right: 10px;
+    }
+
+    .footer-liste {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-icone {
+        display: flex;
+        flex-direction: row;
+    }
+
+    p {
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+
+
+  }
+  
