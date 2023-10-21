@@ -150,7 +150,7 @@ input[type=text] {
   transition: background-color 0.3s;
 }
 .reservation .explore-button:hover {
-  background-color: #ae80e5;
+  background: #c9abee;
 }
 
 /* style fonctionnement */
