@@ -13,6 +13,9 @@ main {
   display: flex;
   width: 100%;
   justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 .icon-search {
@@ -20,7 +23,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 0px;
   margin: 0;
   border: none;
 
@@ -51,7 +54,6 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
 }
-
 
 /* style reservation */
 
@@ -85,11 +87,14 @@ input[type="text"] {
     margin-bottom: 60px;
     align-self: center;
     @include m.round-button(v.$secondary_color, #fff);
-    transition: background-color 0.3s;
+    -webkit-box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3); 
+    box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3);
+    transition: background-color 0.5s;
+    &:hover {
+      -webkit-box-shadow: 0px 0px 21px 3px rgba(0,0,0,0.39); 
+      box-shadow: 0px 0px 21px 3px rgba(0,0,0,0.39);
+     }
   }
-  .explore-button:hover {
-    background: lighten(v.$primary_color, 20%);
-   }
 }
 
 /* style fonctionnement */
@@ -126,6 +131,8 @@ input[type="text"] {
   margin-right: 20px;
   margin-left: 30px;
   position: relative;
+  -webkit-box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3); 
+  box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3);
 
   .step-number {
     position: absolute;
@@ -150,14 +157,8 @@ input[type="text"] {
 
       }
 
-      &.fa-ellipsis-v {
-        font-size: 18px;
-        top: 5px;
-      }
-
-      &.fa-bars {
-        font-size: 18px;
-        top: 5px;
+      &.fa-list {
+        font-size: 22px;
       }
 
       &.fa-store {
@@ -230,8 +231,6 @@ input[type="text"] {
     background-color: white;
     width: 100%;
     height: auto;
-    max-width: 420px;
-    max-height: 400px;
     margin-left: 10px;
     margin-right: 10px;
   }
