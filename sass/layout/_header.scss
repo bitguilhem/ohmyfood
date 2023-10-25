@@ -1,11 +1,18 @@
 header {
-  img {
-      max-width: 200px;
-      height: auto;
-      display: block;
-      margin: 10px auto;
-      padding-top: 15px;
-      padding-bottom: 5px;
-    }
+  display: flex;
+  justify-content: space-between; /* Pour aligner les éléments à gauche et à droite */
+
+  .fa-solid.fa-arrow-left {
+    margin-left: 10px; /* Ajustez la valeur selon vos besoins */
+    align-self: center;
   }
-  
+
+  img {
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Pour centrer l'image horizontalement */
+    padding-top: 15px;
+    padding-bottom: 5px;
+  }
+}
