@@ -2,56 +2,66 @@
 @use './../utils/mixins' as m;
 
 main {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    align-items: left;
-    padding-top: 0px;
-    background-color: v.$grey_color;
-    border-top-right-radius: 50px;
-    border-top-left-radius: 50px;
-  }
-  
-  main img {
-    position: relative;
-    top:0px;
-    left: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: left;
+  padding-top: 0px;
+  z-index: 1;
+
+  img {
+    position: absolute;
+    max-width: auto;
     width: 100%;
+    top: 0px; 
+    z-index: 0;
   }
-  
+
+}
+
+.page-commande {
+  margin-top: 220px;
+  background-color: v.$grey_color;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 1;
+}
+
 .palette {
   position: relative;
   display: flex;
   flex-direction: row;
   width: 100%;
   margin-top: 10px;
-  padding-top: 0px;
+  padding-top: 30px;
 
   h2 {
-    display: flex;
-    padding-left: 10px;
-    padding-right: 20px;
+    width: 100%;
+  }
+
+  i.fas.fa-heart {
+    color: v.$grey_color;
   }
 }
 
-i.fas.fa-heart {
-  display: flex;
-  font-size: 24px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  padding-bottom: 10px;
-  padding-right: 30px;
-  color: white;
-  position: relative;
-}
-i.fas.fa-heart.clickable:active {
-  color: v.$secondary_color;
+/* Entrees */
+h4 {
+  margin-top: 30px;
+  margin-bottom: 5px;
 }
 
-/* Entrees */
+.trait {
+  border-top: 3px solid #000;
+  width: 40px;
+  border-color: v.$tertiary_color
+}
 
 .detail {
   @include m.custom-mixin;
   flex-direction: row;
   background-color: v.$lighter_grey_color;
+  margin-top: 10px;
+  margin-bottom: 15px;
 }
-

@@ -1,3 +1,6 @@
+@use './../utils/variables' as v;
+@use './../utils/mixins' as m;
+
 body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -15,9 +18,28 @@ time, mark, audio, video {
     margin: 0px;
 }
 
+h2 {
+    display: flex;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 26px;
+    font-family: 'Shrikhand', cursive;
+  }
+
 h3 {
     font-size: 26px;
     font-weight: bold;
 }
 
+i.fas.fa-heart {
+    display: flex;
+    font-size: 24px;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    transition: color 0.3s;
+  }
 
+  i.fas.fa-heart:active {
+    color: linear-gradient(to right, v.$primary_color, v.$secondary_color);
+  }

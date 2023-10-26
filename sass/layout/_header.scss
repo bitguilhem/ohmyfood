@@ -1,11 +1,10 @@
-h2 {
-  font-family: 'Shrikhand', cursive;
-}
-
 header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
+
 
   .header-menu {
     display: flex;
