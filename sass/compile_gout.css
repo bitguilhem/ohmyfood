@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -17,7 +16,7 @@ time, mark, audio, video {
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: bold;
 }
 
@@ -33,18 +32,23 @@ header {
 header .header-menu {
   display: flex;
   justify-content: center;
+  position: relative;
+  width: 100%;
 }
-header .fa-solid.fa-arrow-left {
-  margin-left: 10px;
-  align-content: space-between;
-}
-header img {
-  max-width: 200px;
+header .header-menu i.fa-arrow-left {
+  position: absolute;
+  justify-content: flex-start;
+  left: 0px;
   height: auto;
-  display: block;
-  margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 5px;
+  font-size: 18px;
+  padding: 20px;
+  margin-left: 0px;
+}
+header .header-menu img {
+  width: 160px;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 15px;
 }
 
 footer {
@@ -81,18 +85,28 @@ footer p {
 main {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
+  position: relative;
+  align-items: left;
+  padding-top: 0px;
   background-color: #EAEAEA;
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+}
+
+main img {
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 100%;
 }
 
 .palette {
+  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   width: 100%;
+  margin-top: 10px;
+  padding-top: 0px;
 }
 .palette h2 {
   display: flex;
@@ -104,7 +118,7 @@ main {
   font-size: 24px;
   padding-right: 20px;
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  color: white;
+  color: #EAEAEA;
 }
 
 /*# sourceMappingURL=compile_gout.css.map */
