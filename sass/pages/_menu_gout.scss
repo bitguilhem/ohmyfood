@@ -41,12 +41,12 @@ main {
     width: 100%;
   }
 
+
   i.fas.fa-heart {
     color: v.$grey_color;
   }
 }
 
-/* Entrees */
 h4 {
   margin-top: 30px;
   margin-bottom: 5px;
@@ -59,9 +59,37 @@ h4 {
 }
 
 .detail {
-  @include m.custom-mixin;
   flex-direction: row;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  justify-content: space-between;
   background-color: v.$lighter_grey_color;
   margin-top: 10px;
   margin-bottom: 15px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  
+  p {
+  font-size: 14px;
+  }
+
+  p.price {
+    display: flex;
+    font-weight: bold;
+    position: relative;
+    justify-content: flex-end;
+  }
+}
+
+.flex-button {
+  display: flex;
+  justify-content: center;
+  .explore-button {
+  @include m.round-button(v.$secondary_color, #fff);
+  margin-bottom: 40px;
+  margin-top: 30px;
+
+
+}
 }

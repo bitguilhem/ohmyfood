@@ -31,6 +31,12 @@ h3 {
     font-weight: bold;
 }
 
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
 i.fas.fa-heart {
     display: flex;
     font-size: 24px;
@@ -43,3 +49,15 @@ i.fas.fa-heart {
   i.fas.fa-heart:active {
     color: linear-gradient(to right, v.$primary_color, v.$secondary_color);
   }
+
+  .custom-mixin {
+    display: flex;
+    width: auto;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+    -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
+  }
+
