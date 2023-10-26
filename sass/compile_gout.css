@@ -146,7 +146,7 @@ i.fas.fa-heart.clickable:active {
   -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
   flex-direction: row;
-  background-color: #efefef;
+  background-color: white;
 }
 
 /*# sourceMappingURL=compile_gout.css.map */
