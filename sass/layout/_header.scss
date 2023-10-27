@@ -1,3 +1,6 @@
+@use './../utils/variables' as v;
+@use './../utils/mixins' as m;
+
 header {
   display: flex;
   justify-content: space-between;
@@ -30,6 +33,10 @@ header {
     display: flex;
     padding-top: 20px;
     padding-bottom: 15px;
+    @media screen and (min-width: v.$Desktop) {
+      width: 180px;
+      padding-bottom: 30px;
+    }
   }
   }
 

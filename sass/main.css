@@ -20,11 +20,18 @@ h2 {
   padding-left: 10px;
   padding-right: 20px;
   font-size: 26px;
+  font-family: "Shrikhand", cursive;
 }
 
 h3 {
   font-size: 26px;
   font-weight: bold;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 5px;
 }
 
 i.fas.fa-heart {
@@ -36,18 +43,27 @@ i.fas.fa-heart {
   transition: color 0.3s;
 }
 
-i.fas.fa-heart.clickable:active {
+i.fas.fa-heart:active {
   color: linear-gradient(to right, #9356dc, #ff79da);
 }
 
-h2 {
-  font-family: "Shrikhand", cursive;
+.custom-mixin {
+  display: flex;
+  width: auto;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
 }
 
 header {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  position: relative;
+  z-index: 2;
 }
 header .header-menu {
   display: flex;
@@ -70,12 +86,27 @@ header .header-menu img {
   padding-top: 20px;
   padding-bottom: 15px;
 }
+@media screen and (min-width: 768px) {
+  header .header-menu img {
+    width: 180px;
+    padding-bottom: 30px;
+  }
+}
 
 footer {
   background-color: #333333;
   color: white;
   padding-left: 30px;
   padding-bottom: 10px;
+}
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
 }
 footer img {
   width: 120px;
@@ -86,20 +117,49 @@ footer img {
   padding-bottom: 25px;
   filter: brightness(0) invert(1);
 }
+@media screen and (min-width: 768px) {
+  footer img {
+    padding: 20px;
+    width: 100px;
+    margin: 20px;
+  }
+}
 footer .fas {
   padding-right: 10px;
 }
 footer .footer-liste {
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px;
 }
-footer .footer-icone {
+@media screen and (min-width: 768px) {
+  footer .footer-liste {
+    flex-direction: row;
+  }
+}
+footer .footer-liste .footer-icone {
   display: flex;
   flex-direction: row;
 }
-footer p {
-  margin-bottom: 15px;
+footer .footer-liste p {
+  margin-bottom: 10px;
   font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-liste p {
+    padding-right: 30px;
+    font-size: 16px;
+  }
+}
+footer .footer-liste a {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-liste a {
+    padding-right: 10px;
+    font-size: 16px;
+  }
 }
 
 main {
@@ -117,6 +177,11 @@ main {
   padding-top: 10px;
   padding-bottom: 10px;
   box-shadow: inset 0px 3px 3px 0px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 768px) {
+  .background-icon {
+    box-shadow: none;
+  }
 }
 
 .icon-search {
@@ -142,6 +207,12 @@ input[type=text] {
   padding: 10px;
   width: 50%;
 }
+@media screen and (min-width: 768px) {
+  input[type=text] {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
 
 /* style les parties */
 .reservation,
@@ -165,6 +236,13 @@ input[type=text] {
   margin-bottom: 0px;
   text-align: center;
 }
+@media screen and (min-width: 768px) {
+  .reservation h3 {
+    font-size: 36px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+  }
+}
 .reservation p {
   font-size: 22px;
   margin-top: 10px;
@@ -173,6 +251,11 @@ input[type=text] {
   margin-top: 20px;
   margin-bottom: 30px;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .reservation p {
+    font-size: 16px;
+  }
 }
 .reservation .explore-button {
   margin-top: 0px;
@@ -186,12 +269,12 @@ input[type=text] {
   background-color: #ff79da;
   background: linear-gradient(to top, #9356dc, #ff79da);
   color: #fff;
-  padding: 20px 20px;
+  padding: 16px 16px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
-  width: 220px;
+  font-size: 16px;
+  width: 200px;
   -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
   box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
   transition: background-color 0.5s;
@@ -200,11 +283,23 @@ input[type=text] {
   -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.39);
   box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.39);
 }
+@media screen and (min-width: 768px) {
+  .reservation .explore-button {
+    margin-bottom: 30px;
+  }
+}
 
 /* style fonctionnement */
 .fonctionnement {
   width: 100%;
   margin-top: 60px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    display: flex;
+    margin: 40px auto;
+    flex-direction: column;
+  }
 }
 .fonctionnement h3 {
   margin-left: 20px;
@@ -215,6 +310,12 @@ input[type=text] {
   margin-top: 35px;
   margin-bottom: 80px;
 }
+@media screen and (min-width: 768px) {
+  .option {
+    display: flex;
+    flex-direction: row;
+  }
+}
 
 .fonctionnement__step {
   background-color: #EAEAEA;
@@ -224,16 +325,8 @@ input[type=text] {
   text-align: center;
   margin-top: 25px;
   margin-bottom: 15px;
-  display: flex;
-  width: auto;
-  border-radius: 15px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-  -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .fonctionnement__step .step-number {
   position: absolute;
@@ -262,11 +355,26 @@ input[type=text] {
 .fonctionnement__step .custom-icon i.fa-mobile-alt {
   font-size: 24px;
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement__step .custom-icon i.fa-mobile-alt {
+    font-size: 18px;
+  }
+}
 .fonctionnement__step .custom-icon i.fa-list {
   font-size: 22px;
 }
+@media screen and (min-width: 768px) {
+  .fonctionnement__step .custom-icon i.fa-list {
+    font-size: 18px;
+  }
+}
 .fonctionnement__step .custom-icon i.fa-store {
   font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__step .custom-icon i.fa-store {
+    font-size: 18px;
+  }
 }
 .fonctionnement__step i.fas {
   width: 60px;
@@ -281,6 +389,11 @@ input[type=text] {
   margin-left: 50px;
   font-size: 18px;
   font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__step p {
+    font-size: 14px;
+  }
 }
 
 /* style restaurant */
@@ -299,6 +412,13 @@ input[type=text] {
   margin-left: 20px;
   margin-right: 20px;
 }
+@media screen and (min-width: 768px) {
+  .restaurant-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+}
 
 .restaurant-item {
   display: flex;
@@ -308,6 +428,13 @@ input[type=text] {
   width: 100%;
   position: relative;
   margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .restaurant-item {
+    max-width: 400px;
+    max-height: 350px;
+    margin: 20px;
+  }
 }
 .restaurant-item .flag_new {
   background-color: #99e2d0;

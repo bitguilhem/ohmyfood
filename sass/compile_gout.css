@@ -93,6 +93,15 @@ footer {
   padding-left: 30px;
   padding-bottom: 10px;
 }
+@media screen and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding-top: 30px;
+    padding-bottom: 0px;
+  }
+}
 footer img {
   width: 120px;
   height: auto;
@@ -102,20 +111,49 @@ footer img {
   padding-bottom: 25px;
   filter: brightness(0) invert(1);
 }
+@media screen and (min-width: 768px) {
+  footer img {
+    padding: 20px;
+    width: 100px;
+    margin: 20px;
+  }
+}
 footer .fas {
   padding-right: 10px;
 }
 footer .footer-liste {
   display: flex;
   flex-direction: column;
+  padding-bottom: 10px;
 }
-footer .footer-icone {
+@media screen and (min-width: 768px) {
+  footer .footer-liste {
+    flex-direction: row;
+  }
+}
+footer .footer-liste .footer-icone {
   display: flex;
   flex-direction: row;
 }
-footer p {
-  margin-bottom: 15px;
+footer .footer-liste p {
+  margin-bottom: 10px;
   font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-liste p {
+    padding-right: 30px;
+    font-size: 16px;
+  }
+}
+footer .footer-liste a {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  footer .footer-liste a {
+    padding-right: 10px;
+    font-size: 16px;
+  }
 }
 
 main {
@@ -133,6 +171,11 @@ main img {
   top: 0px;
   z-index: 0;
 }
+@media screen and (min-width: 768px) {
+  main img {
+    max-height: 350px;
+  }
+}
 
 .page-commande {
   margin-top: 220px;
@@ -142,6 +185,14 @@ main img {
   padding-left: 10px;
   padding-right: 10px;
   z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .page-commande {
+    max-width: 1200px;
+    margin-top: 310px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .palette {

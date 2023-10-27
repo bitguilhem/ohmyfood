@@ -15,12 +15,12 @@
     background-color: $background-color;
     background: linear-gradient(to top, v.$primary_color, v.$secondary_color);
     color: $text-color;
-    padding: 18px 18px; 
+    padding: 16px 16px; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 18px;
-    width: 180px;
+    font-size: 16px;
+    width: 200px;
     -webkit-box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3); 
     box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3);
     transition: background-color 0.5s;
