@@ -50,14 +50,5 @@ i.fas.fa-heart {
     color: linear-gradient(to right, v.$primary_color, v.$secondary_color);
   }
 
-  .custom-mixin {
-    display: flex;
-    width: auto;
-    border-radius: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-    position: relative;
-    -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  }
+ 
 
