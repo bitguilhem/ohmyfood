@@ -240,38 +240,32 @@ h4 {
   background-color: #f4f4f4;
   margin-top: 10px;
   margin-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+}
+.detail .texte-menu {
+  padding-bottom: 12px;
+  padding-left: 12px;
 }
 .detail p {
   font-size: 14px;
 }
-.detail .custom-mixin {
-  display: flex;
-  width: auto;
-  border-radius: 15px;
-  position: relative;
-  -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-}
-.detail .price-toggle {
-  display: none;
-}
 .detail .price-label {
-  cursor: pointer;
   display: flex;
+  padding-bottom: 12px;
+  font-size: 14px;
   font-weight: bold;
-  position: relative;
-  justify-content: flex-end;
 }
-.detail .price-label + .fas.fa-check-circle {
-  display: none;
-}
-.detail .price-toggle:checked + .price-label + .fas.fa-check-circle {
-  display: inline;
-}
-.detail i {
-  font-size: 20px;
+.detail .fas {
+  padding: 20px;
   background-color: #99e2d0;
-  padding: auto;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.detail .fas.fa-check-circle {
+  color: white;
+  font-size: 20px;
 }
 
 .flex-button {
@@ -293,15 +287,47 @@ h4 {
   display: inline-block;
   font-size: 16px;
   width: 200px;
-  -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.5s;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.9s;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.9s;
+  z-index: 1;
   margin-bottom: 40px;
   margin-top: 30px;
 }
 .flex-button .explore-button:hover {
-  -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.39);
-  box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 1px 2px 30px -1px rgba(0, 0, 0, 0.48);
+  box-shadow: 1px 2px 15px -1px rgba(0, 0, 0, 0.48);
+}
+.flex-button .explore-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.flex-button .explore-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: linear-gradient(to top, #ae80e5, #ff79da);
+  opacity: 0;
+  z-index: -1;
+}
+.flex-button .explore-button:hover {
+  background: linear-gradient(to top, #a16be0, #ff79da);
+}
+.flex-button .explore-button:hover::after {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=compile_gout.css.map */

@@ -13,8 +13,9 @@ main {
     position: absolute;
     max-width: auto;
     width: 100%;
-    top: 0px; 
+    top: 0px;
     z-index: 0;
+
     @media screen and (min-width: v.$Desktop) {
       max-height: 420px;
     }
@@ -30,7 +31,7 @@ main {
   padding-left: 10px;
   padding-right: 10px;
   z-index: 1;
-  
+
   @media screen and (min-width: v.$Desktop) {
     max-width: 1200px;
     margin-top: 310px;
@@ -47,6 +48,7 @@ main {
   width: 100%;
   margin-top: 10px;
   padding-top: 30px;
+
   @media screen and (min-width: v.$Desktop) {
     flex-direction: center;
     width: 40%;
@@ -90,55 +92,50 @@ h4 {
   background-color: v.$lighter_grey_color;
   margin-top: 10px;
   margin-bottom: 15px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+
+  .texte-menu {
+    padding-bottom: 12px;
+    padding-left: 12px;
+  }
 
   p {
     font-size: 14px;
-    }
-
-  .custom-mixin {
-      display: flex;
-      width: auto;
-      border-radius: 15px;
-      position: relative;
-      -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-      box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-    }
-
-  .price-toggle {
-    display: none; // Masquer la case à cocher
   }
 
   .price-label {
-    cursor: pointer; // Afficher un curseur de type main pour indiquer que c'est cliquable
     display: flex;
+    padding-bottom: 12px;
+    font-size: 14px;
     font-weight: bold;
-    position: relative;
-    justify-content: flex-end;
-  }
 
-  .price-label + .fas.fa-check-circle {
-    display: none; // Masquer l'icône check-circle par défaut
-  }
-
-  .price-toggle:checked + .price-label + .fas.fa-check-circle {
-    display: inline; // Afficher l'icône check-circle lorsque la case est cochée
   }
   
-  i {
-    font-size: 20px;
+  .fas {
+    padding: 20px;
     background-color: v.$tertiary_color;
-    padding: auto;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
+
+  .fas.fa-check-circle {
+    color: white;
+    font-size: 20px;
+  }
+
 }
+
 
 .flex-button {
   display: flex;
   justify-content: center;
+
   .explore-button {
-  @include m.round-button(v.$secondary_color, #fff);
-  margin-bottom: 40px;
-  margin-top: 30px;
+    @include m.round-button(v.$secondary_color, #fff);
+    margin-bottom: 40px;
+    margin-top: 30px;
+  }
 
-
-}
 }

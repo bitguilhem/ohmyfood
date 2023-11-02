@@ -21,14 +21,49 @@
     display: inline-block;
     font-size: 16px;
     width: 200px;
-    -webkit-box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3); 
-    box-shadow: 4px 8px 24px 2px rgba(0,0,0,0.3);
-    transition: background-color 0.5s;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.9s;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.9s;
     &:hover {
-      -webkit-box-shadow: 0px 0px 21px 3px rgba(0,0,0,0.39); 
-      box-shadow: 0px 0px 21px 3px rgba(0,0,0,0.39);
+      -webkit-box-shadow: 1px 2px 30px -1px rgba(0,0,0,0.48); 
+      box-shadow: 1px 2px 15px -1px rgba(0,0,0,0.48);
      }
-}
+     z-index: 1;
+
+     &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: linear-gradient(to top, lighten(v.$primary_color, 10%), v.$secondary_color);
+      opacity: 0;
+      z-index: -1;
+    }
+  
+    &:hover {
+      background: linear-gradient(to top, lighten(v.$primary_color, 5%), v.$secondary_color);
+      &::after {
+        opacity: 1;
+      }
+    }
+    }
 
 @mixin encircle($background-color) {
   position: relative;
