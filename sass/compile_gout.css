@@ -18,7 +18,7 @@ time, mark, audio, video {
 h2 {
   display: flex;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 40px;
   font-size: 26px;
   font-family: "Shrikhand", cursive;
 }
@@ -209,7 +209,7 @@ main img {
 }
 .palette h2 {
   width: 66%;
-  padding-left: 40px;
+  padding-left: 10px;
 }
 .palette i.fas.fa-heart {
   color: #EAEAEA;
@@ -245,29 +245,56 @@ h4 {
   border-radius: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   width: auto;
+  position: relative;
+  /*&:active {
+      & > .i.fas.fa-check-circle {
+          animation: progress-bar 1000ms;
+      }
+    }
+
+    @keyframes progress-bar{
+      0% {
+          transform: scaleX(0);
+      }
+      100% {
+          transform: scaleX(1);
+      }
+    }*/
+}
+.detail .base {
+  display: flex;
+  padding-bottom: 14px;
+  padding-left: 12px;
+  padding-top: 14px;
+  padding-right: 12px;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-end;
 }
 .detail .texte-menu {
-  padding-bottom: 12px;
-  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .detail p {
   font-size: 14px;
 }
 .detail .price-label {
   display: flex;
-  padding-bottom: 12px;
   font-size: 14px;
   font-weight: bold;
+  position: relative;
 }
-.detail .fas {
-  padding: 20px;
+.detail i.fas.fa-check-circle {
+  display: none;
+  font-size: 20px;
+  color: black;
+  position: relative;
+  font-size: 20px;
+  padding: 22px;
   background-color: #99e2d0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-}
-.detail .fas.fa-check-circle {
-  color: white;
-  font-size: 20px;
 }
 
 .flex-button {
