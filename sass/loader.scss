@@ -44,7 +44,7 @@ body {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(350px);
+      transform: translateY(380px);
     }
   }
   
@@ -60,6 +60,15 @@ body {
   
 
   .footerload {
-    position: relative;
-    top: 800px;
+    z-index: 1;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform:translate(-50%,100%);
+    font-size: 24px;
+    color: rgb(30, 106, 29);
+    font-weight: bold;
+    filter: blur(1px);
   }
+
+
