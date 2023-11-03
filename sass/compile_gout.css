@@ -208,16 +208,18 @@ main img {
   }
 }
 .palette h2 {
-  width: 100%;
+  width: 66%;
   padding-left: 40px;
 }
 .palette i.fas.fa-heart {
   color: #EAEAEA;
 }
 
-.plats {
-  width: 66%;
-  margin: 0 auto;
+@media screen and (min-width: 768px) {
+  .plats {
+    width: 66%;
+    margin: 0 auto;
+  }
 }
 
 h4 {

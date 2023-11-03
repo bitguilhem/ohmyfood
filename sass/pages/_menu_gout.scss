@@ -57,7 +57,7 @@ main {
   }
 
   h2 {
-    width: 100%;
+    width: 66%;
     padding-left: 40px;
   }
 
@@ -68,8 +68,10 @@ main {
 }
 
 .plats {
+  @media screen and (min-width: v.$Desktop) {
   width: 66%;
   margin: 0 auto;
+}
 }
 
 h4 {
