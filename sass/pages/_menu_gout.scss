@@ -1,5 +1,6 @@
 @use './../utils/variables' as v;
 @use './../utils/mixins' as m;
+$easing: cubic-bezier(0.25, 0.1, 0.25, 1.0);
 
 main {
   display: flex;
@@ -20,7 +21,6 @@ main {
       max-height: 420px;
     }
   }
-
 }
 
 .page-commande {
@@ -51,7 +51,7 @@ main {
 
   @media screen and (min-width: v.$Desktop) {
     flex-direction: center;
-    width: 40%;
+    width: 70%;
     font-size: 18px;
     margin: 0 auto;
   }
@@ -85,6 +85,7 @@ h4 {
   border-color: v.$tertiary_color
 }
 
+
 .detail {
   flex-direction: row;
   display: flex;
@@ -98,21 +99,8 @@ h4 {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   width: auto;
   position: relative;
-  /*&:active {
-      & > .i.fas.fa-check-circle {
-          animation: progress-bar 1000ms;
-      }
-    }
-
-    @keyframes progress-bar{
-      0% {
-          transform: scaleX(0);
-      }
-      100% {
-          transform: scaleX(1);
-      }
-    }*/
-
+  cursor: pointer;
+  
 .base {
   display: flex;
   padding-bottom: 14px;
@@ -128,7 +116,10 @@ h4 {
   .texte-menu {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 4100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   p {
@@ -143,7 +134,7 @@ h4 {
   }
 
   i.fas.fa-check-circle {
-    display: none;
+    display: flex;
     font-size: 20px;
     color: black;
     position: relative;
@@ -152,8 +143,42 @@ h4 {
     background-color: v.$tertiary_color;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    width: 10%;
+    height: 40%;
+    overflow: hidden;
+    &:not(:last-child){
+        margin-right: 20px;
+    }
+    &--anim {
+        transform: translateX(20px);
+        transition: transform 700ms $easing;
+    }
+    &__contents {
+        width: 20px;
+        overflow: hidden;
+    &--anim {
+            transform: translateX(20px*-1);
+            transition: transform 700ms $easing;
+        }
+    }
+}
+@keyframes apparition {
+  from {
+    right: -100px;
+  }
+  to {
+    right: 0;
   }
 }
+@keyframes disparition {
+  from {
+    right: 0;
+  }
+  to {
+    right: -100px;
+  }
+}
+  }
 
 .flex-button {
   display: flex;
