@@ -69,9 +69,9 @@ main {
 
 .plats {
   @media screen and (min-width: v.$Desktop) {
-  width: 66%;
-  margin: 0 auto;
-}
+    width: 66%;
+    margin: 0 auto;
+  }
 }
 
 h4 {
@@ -89,7 +89,6 @@ h4 {
 .detail {
   flex-direction: row;
   display: flex;
-  position: relative;
   align-items: flex-end;
   justify-content: space-between;
   background-color: v.$lighter_grey_color;
@@ -98,25 +97,24 @@ h4 {
   border-radius: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   width: auto;
-  position: relative;
   cursor: pointer;
+  height: 55px;
+  padding-left: 13px;
   
-.base {
-  display: flex;
-  padding-bottom: 14px;
-  padding-left: 12px;
-  padding-top: 14px;
-  padding-right: 12px;
-  flex-direction: row;
-  width: 100%;
-  align-items: flex-end;
 
-}
+  .base {
+    display: flex;
+    padding-bottom: 6px;
+    padding-right: 12px;
+    flex-direction: row;
+    width: 100%;
+    align-items: flex-end;
+  }
 
   .texte-menu {
     display: flex;
     flex-direction: column;
-    width: 4100%;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -133,52 +131,51 @@ h4 {
     position: relative;
   }
 
+  &:active {
   i.fas.fa-check-circle {
     display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
-    color: black;
+    color: white;
     position: relative;
     font-size: 20px;
-    padding: 22px;
     background-color: v.$tertiary_color;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 10%;
-    height: 40%;
-    overflow: hidden;
-    &:not(:last-child){
-        margin-right: 20px;
+    width: 70px;
+    height: 100%;
+    animation: slideOut 0.5s forwards;
+
+    /*&:hover {
+    animation: slideIn 4s;
+    animation-fill-mode: forwards;
+        }*/
+      }
     }
-    &--anim {
-        transform: translateX(20px);
-        transition: transform 700ms $easing;
-    }
-    &__contents {
-        width: 20px;
-        overflow: hidden;
-    &--anim {
-            transform: translateX(20px*-1);
-            transition: transform 700ms $easing;
-        }
+    i.fas.fa-check-circle {
+      overflow: hidden;
+      width: 0px;
+    animation-fill-mode: forwards;
     }
 }
-@keyframes apparition {
-  from {
-    right: -100px;
+  
+  @keyframes slideOut {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 70px;
+    }
   }
-  to {
-    right: 0;
-  }
-}
-@keyframes disparition {
-  from {
-    right: 0;
-  }
-  to {
-    right: -100px;
-  }
-}
-  }
+  /*@keyframes slideOut {
+    0% {
+      width: 70px;
+    }
+    100% {
+      width: 0px;
+    }
+  }*/
 
 .flex-button {
   display: flex;

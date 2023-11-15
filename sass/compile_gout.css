@@ -236,7 +236,6 @@ h4 {
 .detail {
   flex-direction: row;
   display: flex;
-  position: relative;
   align-items: flex-end;
   justify-content: space-between;
   background-color: #f4f4f4;
@@ -245,14 +244,13 @@ h4 {
   border-radius: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   width: auto;
-  position: relative;
   cursor: pointer;
+  height: 55px;
+  padding-left: 13px;
 }
 .detail .base {
   display: flex;
-  padding-bottom: 14px;
-  padding-left: 12px;
-  padding-top: 14px;
+  padding-bottom: 6px;
   padding-right: 12px;
   flex-direction: row;
   width: 100%;
@@ -261,7 +259,7 @@ h4 {
 .detail .texte-menu {
   display: flex;
   flex-direction: column;
-  width: 4100%;
+  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -275,52 +273,47 @@ h4 {
   font-weight: bold;
   position: relative;
 }
-.detail i.fas.fa-check-circle {
+.detail:active i.fas.fa-check-circle {
   display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 20px;
-  color: black;
+  color: white;
   position: relative;
   font-size: 20px;
-  padding: 22px;
   background-color: #99e2d0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  width: 10%;
-  height: 40%;
+  width: 70px;
+  height: 100%;
+  animation: slideOut 0.5s forwards;
+  /*&:hover {
+  animation: slideIn 4s;
+  animation-fill-mode: forwards;
+      }*/
+}
+.detail i.fas.fa-check-circle {
   overflow: hidden;
-}
-.detail i.fas.fa-check-circle:not(:last-child) {
-  margin-right: 20px;
-}
-.detail i.fas.fa-check-circle--anim {
-  transform: translateX(20px);
-  transition: transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-.detail i.fas.fa-check-circle__contents {
-  width: 20px;
-  overflow: hidden;
-}
-.detail i.fas.fa-check-circle__contents--anim {
-  transform: translateX(-20px);
-  transition: transform 700ms cubic-bezier(0.25, 0.1, 0.25, 1);
-}
-@keyframes apparition {
-  from {
-    right: -100px;
-  }
-  to {
-    right: 0;
-  }
-}
-@keyframes disparition {
-  from {
-    right: 0;
-  }
-  to {
-    right: -100px;
-  }
+  width: 0px;
+  animation-fill-mode: forwards;
 }
 
+@keyframes slideOut {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70px;
+  }
+}
+/*@keyframes slideOut {
+  0% {
+    width: 70px;
+  }
+  100% {
+    width: 0px;
+  }
+}*/
 .flex-button {
   display: flex;
   justify-content: center;
