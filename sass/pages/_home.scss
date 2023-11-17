@@ -9,7 +9,7 @@ main {
 
 /* style search */
 .background-icon {
-  background-color: v.$grey_color;
+  background-color: v.$darken_grey_color;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -22,7 +22,7 @@ main {
 }
 
 .icon-search {
-  background-color: v.$grey_color;
+  background-color: v.$darken_grey_color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,7 +42,7 @@ main {
 }
 
 input[type="text"] {
-  background-color: v.$grey_color;
+  background-color: v.$darken_grey_color;
   border: none;
   font-weight: bold;
   font-size: 18px;
@@ -64,10 +64,9 @@ input[type="text"] {
 
 /* style reservation */
 .reservation {
-  background-color: v.$lighter_grey_color;
+  background-color: v.$grey_color;
   display: flex;
   width: 100%;
-  justify-content: center;
 
   h3 {
     margin-top: 45px;
@@ -110,24 +109,25 @@ input[type="text"] {
 
 .fonctionnement {
   width: 100%;
-  margin-top: 60px;
-  
+  margin-top: 50px;
+  justify-content: center;
   @media screen and (min-width: v.$Desktop) {
     display: flex;
-    margin: 40px auto;
     flex-direction: column;
-    
+    width: 80%;
   }
 
   h3 {
-  margin-left: 20px;
+  margin-left: 10px;
   }
 }
 
 .option {
   width: 100%;
-  margin-top: 35px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
   @media screen and (min-width: v.$Desktop) {
     display: flex;
     flex-direction: row;
@@ -135,21 +135,24 @@ input[type="text"] {
 }
 
 .fonctionnement__step {
+  display: flex;
   background-color: v.$grey_color;
-  align-items: center;
+  width: 100%;
+  max-width: 500px;
   margin-right: 20px;
   margin-left: 30px;
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 15px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  @media screen and (min-width: v.$Desktop) {
+    max-width: 400px;
+  }
 
   .step-number {
     position: absolute;
     @include m.encircle(v.$primary_color);
     margin-right: 20px;
-    margin-left: -20px;
+    margin-left: -3px;
     right: 10px;
   }
 
@@ -157,7 +160,7 @@ input[type="text"] {
     display: inline-block;
     position: relative;
     right: 20px;
-    bottom: 15px;
+    bottom: 0px;
 
 
     i {
@@ -190,7 +193,7 @@ input[type="text"] {
   i.fas {
     width: 60px;
     position: absolute;
-    color: v.$darken_grey_color;
+    color: v.$strong_grey_color;
   }
 
   i.fas.fa-store {
@@ -198,25 +201,31 @@ input[type="text"] {
   }
 
   p {
-    width: 100% text-align left;
-    margin-left: 50px;
+    width: 100%
+    text-align left;
     font-size: 18px;
     font-weight: bold;
+    padding-left: 45px;
+    padding-bottom: 20px;
     @media screen and (min-width: v.$Desktop) {
       font-size: 14px;
+      padding-left: 10px;
     }
   }
 }
 
 /* style restaurant */
 .restaurant {
+  display: flex;
   width: 100%;
+  justify-content: center;
   background-color: v.$grey_color;
-  padding-top: 65px;
+  padding-top: 40px;
   padding-bottom: 60px;
-
+  
   h3 {
-    margin-left: 20px;
+    display: flex;
+    margin-left: 120px;
     margin-bottom: 15px;
   }
 }
@@ -228,6 +237,7 @@ input[type="text"] {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: center;
   }
 }
 
@@ -237,10 +247,9 @@ input[type="text"] {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  position: relative;
   margin-top: 10px;
   @media screen and (min-width: v.$Desktop) {
-    max-width: 400px;
+    max-width: 450px;
     max-height: 350px;
     margin: 20px;
   }
@@ -270,6 +279,7 @@ input[type="text"] {
   img {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    background-image: blue;
   }
 
   .restaurant-bandeau {

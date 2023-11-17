@@ -15,6 +15,13 @@ time, mark, audio, video {
   margin: 0px;
 }
 
+@media (min-width: 1200px) {
+  body {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+
 h2 {
   display: flex;
   padding-left: 10px;
@@ -40,10 +47,9 @@ i.fas.fa-heart {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   padding-bottom: 10px;
   padding-right: 30px;
-  transition: color 0.3s;
+  cursor: pointer;
 }
-
-i.fas.fa-heart:active {
+i.fas.fa-heart:hover {
   color: linear-gradient(to right, #9356dc, #ff79da);
 }
 
@@ -157,34 +163,37 @@ main {
   position: relative;
   align-items: left;
   padding-top: 0px;
-  z-index: 1;
+  /*  img {
+      position: absolute;
+      max-width: auto;
+      width: 100%;
+      top: 0px;
+      z-index: 0;
+
+      @media screen and (min-width: v.$Desktop) {
+        max-height: 420px;
+      }
+    }*/
 }
-main img {
-  position: absolute;
-  max-width: auto;
-  width: 100%;
-  top: 0px;
-  z-index: 0;
+main .container {
+  width: 80%;
+  height: 250px;
 }
-@media screen and (min-width: 768px) {
-  main img {
-    max-height: 420px;
-  }
+main .container div {
+  background-image: url("../../asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-position: center;
 }
 
 .page-commande {
-  margin-top: 220px;
-  background-color: #EAEAEA;
+  background-color: #F6F6F6;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   padding-left: 10px;
   padding-right: 10px;
-  z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .page-commande {
     max-width: 1200px;
-    margin-top: 310px;
     margin-left: auto;
     margin-right: auto;
     width: 70%;
@@ -210,9 +219,11 @@ main img {
 .palette h2 {
   width: 66%;
   padding-left: 10px;
+  justify-content: center;
+  align-self: center;
 }
 .palette i.fas.fa-heart {
-  color: #EAEAEA;
+  color: #F6F6F6;
 }
 
 @media screen and (min-width: 768px) {
@@ -238,7 +249,7 @@ h4 {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  background-color: #f4f4f4;
+  background-color: #FFFFFF;
   margin-top: 10px;
   margin-bottom: 15px;
   border-radius: 20px;
@@ -247,6 +258,14 @@ h4 {
   cursor: pointer;
   height: 55px;
   padding-left: 13px;
+  /*@keyframes slideOut {
+    0% {
+      width: 70px;
+    }
+    100% {
+      width: 0px;
+    }
+  }*/
 }
 .detail .base {
   display: flex;
@@ -287,17 +306,23 @@ h4 {
   width: 70px;
   height: 100%;
   animation: slideOut 0.5s forwards;
-  /*&:hover {
+  animation-fill-mode: forwards;
+}
+.detail:active i.fas.fa-check-circle:hover {
+  content: "";
   animation: slideIn 4s;
   animation-fill-mode: forwards;
-      }*/
 }
 .detail i.fas.fa-check-circle {
   overflow: hidden;
   width: 0px;
-  animation-fill-mode: forwards;
 }
-
+.detail:hover {
+  animation: slideIn 4s forwards;
+}
+.detail.clicked .detail {
+  animation: slideIn 4s forwards;
+}
 @keyframes slideOut {
   0% {
     width: 0px;
@@ -306,14 +331,7 @@ h4 {
     width: 70px;
   }
 }
-/*@keyframes slideOut {
-  0% {
-    width: 70px;
-  }
-  100% {
-    width: 0px;
-  }
-}*/
+
 .flex-button {
   display: flex;
   justify-content: center;

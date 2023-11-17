@@ -15,10 +15,17 @@ time, mark, audio, video {
   margin: 0px;
 }
 
+@media (min-width: 1200px) {
+  body {
+    max-width: 1800px;
+    margin: 0 auto;
+  }
+}
+
 h2 {
   display: flex;
   padding-left: 10px;
-  padding-right: 20px;
+  padding-right: 40px;
   font-size: 26px;
   font-family: "Shrikhand", cursive;
 }
@@ -40,22 +47,10 @@ i.fas.fa-heart {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   padding-bottom: 10px;
   padding-right: 30px;
-  transition: color 0.3s;
+  cursor: pointer;
 }
-
-i.fas.fa-heart:active {
+i.fas.fa-heart:hover {
   color: linear-gradient(to right, #9356dc, #ff79da);
-}
-
-.custom-mixin {
-  display: flex;
-  width: auto;
-  border-radius: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-  position: relative;
-  -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
 }
 
 header {
@@ -224,10 +219,9 @@ input[type=text] {
 
 /* style reservation */
 .reservation {
-  background-color: #f4f4f4;
+  background-color: #F6F6F6;
   display: flex;
   width: 100%;
-  justify-content: center;
 }
 .reservation h3 {
   margin-top: 45px;
@@ -275,13 +269,45 @@ input[type=text] {
   display: inline-block;
   font-size: 16px;
   width: 200px;
-  -webkit-box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  box-shadow: 4px 8px 24px 2px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.5s;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.9s;
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow 0.9s;
+  z-index: 1;
 }
 .reservation .explore-button:hover {
-  -webkit-box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.39);
-  box-shadow: 0px 0px 21px 3px rgba(0, 0, 0, 0.39);
+  -webkit-box-shadow: 1px 2px 30px -1px rgba(0, 0, 0, 0.48);
+  box-shadow: 1px 2px 15px -1px rgba(0, 0, 0, 0.48);
+}
+.reservation .explore-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+.reservation .explore-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: linear-gradient(to top, #ae80e5, #ff79da);
+  opacity: 0;
+  z-index: -1;
+}
+.reservation .explore-button:hover {
+  background: linear-gradient(to top, #a16be0, #ff79da);
+}
+.reservation .explore-button:hover::after {
+  opacity: 1;
 }
 @media screen and (min-width: 768px) {
   .reservation .explore-button {
@@ -292,23 +318,26 @@ input[type=text] {
 /* style fonctionnement */
 .fonctionnement {
   width: 100%;
-  margin-top: 60px;
+  margin-top: 50px;
+  justify-content: center;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement {
     display: flex;
-    margin: 40px auto;
     flex-direction: column;
+    width: 80%;
   }
 }
 .fonctionnement h3 {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .option {
   width: 100%;
-  margin-top: 35px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
 }
 @media screen and (min-width: 768px) {
   .option {
@@ -318,15 +347,20 @@ input[type=text] {
 }
 
 .fonctionnement__step {
-  background-color: #EAEAEA;
-  align-items: center;
+  display: flex;
+  background-color: #F6F6F6;
+  width: 100%;
+  max-width: 500px;
   margin-right: 20px;
   margin-left: 30px;
-  text-align: center;
-  margin-top: 25px;
-  margin-bottom: 15px;
   padding-top: 20px;
-  padding-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement__step {
+    max-width: 400px;
+  }
 }
 .fonctionnement__step .step-number {
   position: absolute;
@@ -340,14 +374,14 @@ input[type=text] {
   text-align: center;
   line-height: 25px;
   margin-right: 20px;
-  margin-left: -20px;
+  margin-left: -3px;
   right: 10px;
 }
 .fonctionnement__step .custom-icon {
   display: inline-block;
   position: relative;
   right: 20px;
-  bottom: 15px;
+  bottom: 0px;
 }
 .fonctionnement__step .custom-icon i {
   position: absolute;
@@ -379,32 +413,37 @@ input[type=text] {
 .fonctionnement__step i.fas {
   width: 60px;
   position: absolute;
-  color: #6b6b6b;
+  color: #909090;
 }
 .fonctionnement__step i.fas.fa-store {
   color: #9356dc;
 }
 .fonctionnement__step p {
   width: 100% text-align left;
-  margin-left: 50px;
   font-size: 18px;
   font-weight: bold;
+  padding-left: 45px;
+  padding-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
   .fonctionnement__step p {
     font-size: 14px;
+    padding-left: 10px;
   }
 }
 
 /* style restaurant */
 .restaurant {
+  display: flex;
   width: 100%;
-  background-color: #EAEAEA;
-  padding-top: 65px;
+  justify-content: center;
+  background-color: #F6F6F6;
+  padding-top: 40px;
   padding-bottom: 60px;
 }
 .restaurant h3 {
-  margin-left: 20px;
+  display: flex;
+  margin-left: 120px;
   margin-bottom: 15px;
 }
 
@@ -417,6 +456,7 @@ input[type=text] {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
+    justify-content: center;
   }
 }
 
@@ -426,12 +466,11 @@ input[type=text] {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  position: relative;
   margin-top: 10px;
 }
 @media screen and (min-width: 768px) {
   .restaurant-item {
-    max-width: 400px;
+    max-width: 450px;
     max-height: 350px;
     margin: 20px;
   }
@@ -458,6 +497,7 @@ input[type=text] {
 .restaurant-item img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  background-image: blue;
 }
 .restaurant-item .restaurant-bandeau {
   display: flex;
