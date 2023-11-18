@@ -10,13 +10,11 @@ main {
   padding-top: 0px;
 
 .container {
-  width: 80%;
-  height:  250px;
-  
-  div{
-    background-image: url('../../asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
-    background-position: center;
-  }
+  position: absolute;
+  width: 100%;
+  height:  350px;
+  background-image: url('../asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+  background-position: center;
 }
 
 /*  img {
@@ -30,14 +28,17 @@ main {
       max-height: 420px;
     }
   }*/
+  
 }
 
 .page-commande {
+  margin-top: 300px;
   background-color: v.$grey_color;
   border-top-right-radius: 50px;
   border-top-left-radius: 50px;
   padding-left: 10px;
   padding-right: 10px;
+  z-index: 1;
 
   @media screen and (min-width: v.$Desktop) {
     max-width: 1200px;
@@ -139,7 +140,6 @@ h4 {
     position: relative;
   }
 
-  &:active {
   i.fas.fa-check-circle {
     display: flex;
     justify-content: center;
@@ -151,33 +151,18 @@ h4 {
     background-color: v.$tertiary_color;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    width: 70px;
+    width: 0px;
     height: 100%;
-    animation: slideOut 0.5s forwards;
-    animation-fill-mode: forwards;
-
-    &:hover {
-    content: "";
-    animation: slideIn 4s;
-    animation-fill-mode: forwards;
-        }
-      }
-      
-    }
-    i.fas.fa-check-circle {
-      overflow: hidden;
-      width: 0px;
-
+    overflow: hidden;
+    // animation: slideOut 0.5s forwards;
+    // animation-fill-mode: forwards;
     }
 
-
-    &:hover {
-      animation: slideIn 4s forwards;
-    }
-  
-    .detail.clicked & {
-      animation: slideIn 4s forwards;
-    }
+    &:hover i.fas.fa-check-circle {
+      content: "";
+      animation: slideIn 0.5s;
+      animation-fill-mode: forwards;
+          }
 
   @keyframes slideOut {
     0% {
@@ -188,15 +173,14 @@ h4 {
     }
   }
 
-  
-  /*@keyframes slideOut {
+  @keyframes slideIn {
     0% {
-      width: 70px;
-    }
-    100% {
       width: 0px;
     }
-  }*/
+    100% {
+      width: 70px;
+    }
+  }
 }
 
 .flex-button {
