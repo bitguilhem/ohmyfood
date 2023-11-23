@@ -5,5 +5,6 @@ $grey_color: #F6F6F6;
 $darken_tertiary_color: darken($tertiary_color, 50%);
 $strong_grey_color: darken($grey_color, 40%);
 $darken_grey_color: #EAEAEA;
+$gradient-colors: linear-gradient(to top, $primary_color, $secondary_color);
 $Desktop: 768px;
 $largeDesktop: 1024px;

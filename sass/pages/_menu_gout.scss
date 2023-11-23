@@ -9,16 +9,16 @@ main {
   align-items: left;
   padding-top: 0px;
 }
+
 .container {
   position: absolute;
   width: 100%;
-  height:  350px;
-
-  div{
-  background-image: url('asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+  height:  380px;
+  background-image: url('../asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
   background-position: center;
-  }
+  background-size: 100%;
 }
+
 
 .page-commande {
   margin-top: 300px;
@@ -58,12 +58,23 @@ main {
     justify-content: center;
     align-self: center;
   }
+}
 
-
-  i.fas.fa-heart {
+  .heart-icon:nth-child(1) {
     color: v.$grey_color;
   }
-}
+
+  .heart-icon:nth-child(2) {
+    position: absolute;
+    top: 30px;
+    opacity: 0;
+    color: v.$primary_color;
+    transition: opacity 0.5s;
+    }
+
+    .heart-container:hover .heart-icon:nth-child(2) {
+      opacity: 1;
+    }
 
 .plats {
   @media screen and (min-width: v.$Desktop) {
@@ -143,8 +154,6 @@ h4 {
     width: 0px;
     height: 100%;
     overflow: hidden;
-    // animation: slideOut 0.5s forwards;
-    // animation-fill-mode: forwards;
     }
 
     &:hover i.fas.fa-check-circle {
@@ -153,12 +162,16 @@ h4 {
       animation-fill-mode: forwards;
           }
 
+     &:not(:hover) i.fas.fa-check-circle {
+        animation: slideOut 0.5s forwards;
+          }
+
   @keyframes slideOut {
     0% {
-      width: 0px;
+      width: 70px;
     }
     100% {
-      width: 70px;
+      width: 0px;
     }
   }
 
