@@ -16,10 +16,10 @@
 }
 
 
-.fas.fa-cheese {
+.fas.fa-utensils {
   position: absolute;
-  font-size: 100px;
-  color: #ffd700;
+  font-size: 90px;
+  color: v.$strong_grey_color;
   z-index: 2;
 }
 
@@ -27,16 +27,16 @@
   border: 10px solid #f3f3f3;
   border-top: 10px solid v.$primary_color;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   animation: spin 1.5s linear infinite;
   z-index: 3;
 }
 
+
 body:not(.loading) .loader-container {
-  animation: slideIn 30s;
+  animation: slideIn 1s;
   animation-fill-mode: forwards;
-  
 }
 @keyframes slideIn {
   0% {
@@ -352,21 +352,26 @@ input[type="text"] {
     padding-bottom: 20px;
   }
     
-  
     .heart-icon:nth-child(1) {
+      position: relative;
       color: white;
     }
   
     .heart-icon:nth-child(2) {
       position: absolute;
-      top: 26px;
+      top: 24px;
+      right: 28px;
+      font-size: 28px;
       opacity: 0;
-      color: v.$primary_color;
-      transition: opacity 0.5s;
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+      background-image: linear-gradient(to top, v.$primary_color , v.$secondary_color);
       }
     
     .heart-container:hover .heart-icon:nth-child(2) {
-        opacity: 1;
+        opacity: 1; 
+        transition: opacity 0.3s;
       }
   
   .restaurant-titre {

@@ -49,9 +49,6 @@ i.fas.fa-heart {
   padding-right: 30px;
   cursor: pointer;
 }
-i.fas.fa-heart:hover {
-  color: linear-gradient(to right, #9356dc, #ff79da);
-}
 
 header {
   display: flex;
@@ -221,17 +218,26 @@ main {
 
 .heart-icon:nth-child(2) {
   position: absolute;
-  top: 30px;
+  top: 27px;
+  right: 114px;
+  font-size: 30px;
   opacity: 0;
-  color: #9356dc;
-  transition: opacity 0.5s;
-  animation-fill-mode: forwards;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
+  transition: opacity 0.2s;
 }
 
 .heart-container:hover .heart-icon:nth-child(2) {
   opacity: 1;
 }
 
+.plats {
+  opacity: 0;
+  transition: opacity 1s;
+  animation: fadeIn 1s 3s forwards;
+}
 @media screen and (min-width: 768px) {
   .plats {
     width: 66%;
@@ -239,8 +245,20 @@ main {
   }
 }
 
+.plats.active:nth-child(1) {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 h4 {
-  margin-top: 30px;
+  margin-top: 50px;
   margin-bottom: 5px;
 }
 
@@ -253,16 +271,15 @@ h4 {
 .detail {
   flex-direction: row;
   display: flex;
-  align-items: flex-end;
   justify-content: space-between;
   background-color: #FFFFFF;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: 15px;
   border-radius: 20px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
   width: auto;
   cursor: pointer;
-  height: 55px;
+  height: 75px;
   padding-left: 13px;
 }
 .detail .base {
@@ -271,7 +288,7 @@ h4 {
   padding-right: 12px;
   flex-direction: row;
   width: 100%;
-  align-items: flex-end;
+  align-items: center;
 }
 .detail .texte-menu {
   display: flex;
@@ -289,6 +306,8 @@ h4 {
   font-size: 14px;
   font-weight: bold;
   position: relative;
+  align-items: flex-end;
+  height: 65%;
 }
 .detail i.fas.fa-check-circle {
   display: flex;

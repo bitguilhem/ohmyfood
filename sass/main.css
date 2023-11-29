@@ -49,9 +49,6 @@ i.fas.fa-heart {
   padding-right: 30px;
   cursor: pointer;
 }
-i.fas.fa-heart:hover {
-  color: linear-gradient(to right, #9356dc, #ff79da);
-}
 
 header {
   display: flex;
@@ -171,10 +168,10 @@ footer .footer-liste a {
   height: 100vh;
 }
 
-.fas.fa-cheese {
+.fas.fa-utensils {
   position: absolute;
-  font-size: 100px;
-  color: #ffd700;
+  font-size: 90px;
+  color: #909090;
   z-index: 2;
 }
 
@@ -182,14 +179,14 @@ footer .footer-liste a {
   border: 10px solid #f3f3f3;
   border-top: 10px solid #9356dc;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   animation: spin 1.5s linear infinite;
   z-index: 3;
 }
 
 body:not(.loading) .loader-container {
-  animation: slideIn 30s;
+  animation: slideIn 1s;
   animation-fill-mode: forwards;
 }
 
@@ -570,17 +567,23 @@ input[type=text] {
   padding-bottom: 20px;
 }
 .restaurant-item .heart-icon:nth-child(1) {
+  position: relative;
   color: white;
 }
 .restaurant-item .heart-icon:nth-child(2) {
   position: absolute;
-  top: 26px;
+  top: 24px;
+  right: 28px;
+  font-size: 28px;
   opacity: 0;
-  color: #9356dc;
-  transition: opacity 0.5s;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, #9356dc, #ff79da);
 }
 .restaurant-item .heart-container:hover .heart-icon:nth-child(2) {
   opacity: 1;
+  transition: opacity 0.3s;
 }
 .restaurant-item .restaurant-titre {
   display: flex;
