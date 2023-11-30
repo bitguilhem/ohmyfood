@@ -60,12 +60,12 @@ main {
 
 .heart-icon:nth-child(1) {
   color: v.$grey_color;
+  padding-left: 3px;
 }
 
 .heart-icon:nth-child(2) {
   position: absolute;
   top: 27px;
-  right: 114px;
   font-size: 30px;
   opacity: 0;
   color: transparent;
@@ -81,17 +81,28 @@ main {
 
 .plats {
   opacity: 0;
-  transition: opacity 1s;
-  animation: fadeIn 1s 3s forwards;
+  transition: opacity 1.5s;
   
   @media screen and (min-width: v.$Desktop) {
     width: 66%;
     margin: 0 auto;
   }
+
+&.active {
+  opacity: 1;
+}
 }
 
-.plats.active:nth-child(1) {
-  opacity: 1;
+.plats1 {
+  animation: fadeIn 8s 1s forwards;
+}
+
+.plats2 {
+  animation: fadeIn 8s 2s forwards;
+}
+
+.plats3 {
+  animation: fadeIn 8s 3s forwards;
 }
 
 @keyframes fadeIn {
