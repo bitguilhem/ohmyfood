@@ -166,9 +166,24 @@ main {
   position: absolute;
   width: 100%;
   height: 380px;
-  background-image: url("../asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   background-position: center;
   background-size: 100%;
+}
+
+.photogout {
+  background-image: url("../asset/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.photofrancaise {
+  background-image: url("../asset/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.photonote {
+  background-image: url("../asset/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.photosens {
+  background-image: url("../asset/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
 }
 
 .page-commande {
@@ -236,7 +251,6 @@ main {
 .plats {
   opacity: 0;
   transition: opacity 1.5s;
-  animation: fadeIn 7s 1s forwards;
 }
 @media screen and (min-width: 768px) {
   .plats {
@@ -246,6 +260,18 @@ main {
 }
 .plats.active {
   opacity: 1;
+}
+
+.plats1 {
+  animation: fadeIn 7s 1s forwards;
+}
+
+.plats2 {
+  animation: fadeIn 7s 2s forwards;
+}
+
+.plats3 {
+  animation: fadeIn 7s 3s forwards;
 }
 
 @keyframes fadeIn {
