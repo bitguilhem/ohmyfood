@@ -18,6 +18,7 @@ main {
   background-size: 100%;
 }
 
+
 .page-commande {
   margin-top: 300px;
   background-color: v.$grey_color;
@@ -94,15 +95,15 @@ main {
 }
 
 .plats1 {
-  animation: fadeIn 8s 1s forwards;
+  animation: fadeIn 7s 1s forwards;
 }
 
 .plats2 {
-  animation: fadeIn 8s 2s forwards;
+  animation: fadeIn 7s 2s forwards;
 }
 
 .plats3 {
-  animation: fadeIn 8s 3s forwards;
+  animation: fadeIn 7s 3s forwards;
 }
 
 @keyframes fadeIn {

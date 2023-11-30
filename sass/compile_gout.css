@@ -236,6 +236,7 @@ main {
 .plats {
   opacity: 0;
   transition: opacity 1.5s;
+  animation: fadeIn 7s 1s forwards;
 }
 @media screen and (min-width: 768px) {
   .plats {
@@ -245,18 +246,6 @@ main {
 }
 .plats.active {
   opacity: 1;
-}
-
-.plats1 {
-  animation: fadeIn 8s 1s forwards;
-}
-
-.plats2 {
-  animation: fadeIn 8s 2s forwards;
-}
-
-.plats3 {
-  animation: fadeIn 8s 3s forwards;
 }
 
 @keyframes fadeIn {
