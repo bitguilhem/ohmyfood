@@ -380,10 +380,7 @@ h4 {
 }
 .flex-button .explore-button {
   border: none;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
   background-color: #ff79da;
   background: linear-gradient(to top, #9356dc, #ff79da);
   color: #fff;
@@ -413,10 +410,7 @@ h4 {
   right: 0;
   bottom: 0;
   left: 0;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
 }
 .flex-button .explore-button::after {
   content: "";
