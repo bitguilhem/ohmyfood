@@ -5,7 +5,7 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
-  align-items: left;
+  // align-items: left;
   padding-top: 0px;
 }
 
@@ -59,7 +59,7 @@ main {
   padding-top: 30px;
 
   @media screen and (min-width: v.$Desktop) {
-    flex-direction: center;
+    // flex-direction: center;
     width: 70%;
     font-size: 18px;
     margin: 0 auto;
