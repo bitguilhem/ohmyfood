@@ -15,8 +15,7 @@
   height: 100vh;
 }
 
-
-.fas.fa-utensils {
+.utensils1 {
   position: absolute;
   font-size: 90px;
   color: v.$strong_grey_color;
@@ -35,7 +34,7 @@
 
 
 body:not(.loading) .loader-container {
-  animation: slideIn 1s;
+  animation: slideIn 2s;
   animation-fill-mode: forwards;
 }
 @keyframes slideIn {
@@ -254,7 +253,7 @@ input[type="text"] {
   }
 
   p {
-    width: 100%
+    width: 100%;
     // text-align left;
     font-size: 18px;
     font-weight: bold;

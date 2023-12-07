@@ -168,7 +168,7 @@ footer .footer-liste a {
   height: 100vh;
 }
 
-.fas.fa-utensils {
+.utensils1 {
   position: absolute;
   font-size: 90px;
   color: #909090;
@@ -186,7 +186,7 @@ footer .footer-liste a {
 }
 
 body:not(.loading) .loader-container {
-  animation: slideIn 1s;
+  animation: slideIn 2s;
   animation-fill-mode: forwards;
 }
 
@@ -305,10 +305,7 @@ input[type=text] {
   margin-bottom: 60px;
   align-self: center;
   border: none;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
   background-color: #ff79da;
   background: linear-gradient(to top, #9356dc, #ff79da);
   color: #fff;
@@ -336,10 +333,7 @@ input[type=text] {
   right: 0;
   bottom: 0;
   left: 0;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
+  border-radius: 30px;
 }
 .reservation .explore-button::after {
   content: "";
@@ -348,7 +342,6 @@ input[type=text] {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: linear-gradient(to top, #ae80e5, #ff79da);
   opacity: 0;
   z-index: -1;
 }
@@ -470,7 +463,7 @@ input[type=text] {
   color: #9356dc;
 }
 .fonctionnement__step p {
-  width: 100% text-align left;
+  width: 100%;
   font-size: 18px;
   font-weight: bold;
   padding-left: 45px;
@@ -554,7 +547,6 @@ input[type=text] {
 .restaurant-item img {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  background-image: blue;
 }
 .restaurant-item .restaurant-bandeau {
   position: relative;
@@ -574,7 +566,7 @@ input[type=text] {
   position: absolute;
   top: 24px;
   right: 28px;
-  font-size: 28px;
+  font-size: 29px;
   opacity: 0;
   color: transparent;
   background-clip: text;
