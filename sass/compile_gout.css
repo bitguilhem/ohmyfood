@@ -158,7 +158,6 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
-  align-items: left;
   padding-top: 0px;
 }
 
@@ -214,7 +213,6 @@ main {
 }
 @media screen and (min-width: 768px) {
   .palette {
-    flex-direction: center;
     width: 70%;
     font-size: 18px;
     margin: 0 auto;
@@ -419,7 +417,6 @@ h4 {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: linear-gradient(to top, #ae80e5, #ff79da);
   opacity: 0;
   z-index: -1;
 }
