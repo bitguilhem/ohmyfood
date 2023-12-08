@@ -168,13 +168,13 @@ h4 {
     display: flex;
     flex-direction: column;
     width: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 
   p {
     font-size: 14px;
+    white-space: nowrap;      /* Empêche le texte de passer à la ligne */
+    overflow: hidden;         /* Masque tout le texte qui dépasse la taille définie */
+    text-overflow: ellipsis;
   }
 
   .price-label {

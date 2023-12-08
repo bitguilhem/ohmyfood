@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -39,6 +40,9 @@ h5 {
   font-size: 16px;
   font-weight: bold;
   padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 i.fas.fa-heart {
@@ -317,12 +321,12 @@ h4 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .detail p {
   font-size: 14px;
+  white-space: nowrap; /* Empêche le texte de passer à la ligne */
+  overflow: hidden; /* Masque tout le texte qui dépasse la taille définie */
+  text-overflow: ellipsis;
 }
 .detail .price-label {
   display: flex;
